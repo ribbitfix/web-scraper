@@ -1,6 +1,6 @@
 from django.core.management.base import NoArgsCommand
 from pyquery import PyQuery
-from webscraperApp.models import TopicTitle, TopicLink
+from webscraperApp.models import Topic, Link
 
 class Command(NoArgsCommand):
 
@@ -16,9 +16,13 @@ class Command(NoArgsCommand):
 		for topic in topics:
 			jQuery = PyQuery(url=topic)
 			title = jQuery('h1.ipsType_pagetitle').html()
-			t = TopicTitle(title=title)
+			topicLink = topic
+			t = Topic(title=title, topicLink=topicLink)
 			t.save()
 			for link in jQuery('div.entry-content a'):
 				url = jQuery(link).attr('href')
-				l = TopicLink(topicTitle=t, link=url)
-				l.save()
+				l = Link(topic=t, link=url)
+				try:				
+					l.save()
+				except IntegrityError:
+					pass
