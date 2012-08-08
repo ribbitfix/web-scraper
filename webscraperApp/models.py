@@ -4,6 +4,7 @@ class Topic(models.Model):
 	title = models.CharField(max_length=200)
 	topicLink = models.URLField()
 	links = models.ManyToManyField("Link")
+
 	def __unicode__(self):
 		return self.title
 
