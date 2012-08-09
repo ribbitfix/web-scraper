@@ -9,6 +9,7 @@ Some things I learned from this project:
 - How to install and use Ubuntu
 
 Here are my notes from the process:
+-----------------------------------
 ### 9/27/11
 jQuery uses similar syntax to CSS, like . and # to specify HTML elements. (If you query just a word, it searches all tags?) You can then apply methods to whatever you've scraped - html() gives you the text, for example.
 
