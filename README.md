@@ -8,6 +8,7 @@ Some things I learned from this project:
 - That my trusty old Macbook Pro isn't up to the task of modern web development, therefore:
 - How to install and use Ubuntu
 
+Here are my notes from the process:
 ### 9/27/11
 jQuery uses similar syntax to CSS, like . and # to specify HTML elements. (If you query just a word, it searches all tags?) You can then apply methods to whatever you've scraped - html() gives you the text, for example.
 
@@ -49,7 +50,7 @@ QUESTION: $.each() vs $('foo').each() - when to use which?
 NEXT: back to PyQuery?
 
 ### 10/17
-Need gcc-4.0 to install PyQuery
+Apparently I need gcc-4.0 to install PyQuery.
 
 ### 11/3
 Tried installing PyQuery again w/ same result as before; noticed that the version of gcc it's using is for powerpc systems: WTF?
@@ -101,7 +102,7 @@ Installed IPython
 Created virtualenv called webscraper. Tried to pip install PyQuery and it didn't work.
 
 ### 12/19 
-apt: package manager for Debian. If pip isn't working, try apt. It may give you an outdated version, but the install will be easy.
+apt: package manager for Debian. Jeff says if pip isn't working, try apt. It may give you an outdated version, but the install will be easy.
 
 apt installed PyQuery. It worked, whoo!
 
